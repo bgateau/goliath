@@ -1,0 +1,2094 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://bnjgat.fr/onto/goliath.owl#"
+     xml:base="http://bnjgat.fr/onto/goliath.owl"
+     xmlns:SensorOntology="https://www.w3.org/2005/Incubator/ssn/wiki/images/4/42/SensorOntology20090320.owl.xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:muo="http://purl.oclc.org/NET/muo/muo#"
+     xmlns:dogont="http://elite.polito.it/ontologies/dogont.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:co="http://onto.tudor.lu/context/context.owl#"
+     xmlns:untitled-ontology-17="http://www.semanticweb.org/gateau/ontologies/2016/3/untitled-ontology-17#"
+     xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
+     xmlns:ucum="http://purl.oclc.org/NET/muo/ucum/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:goliath="http://bnjgat.fr/onto/goliath.owl#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://bnjgat.fr/onto/goliath.owl">
+        <owl:imports rdf:resource="http://purl.oclc.org/NET/muo/muo#"/>
+        <owl:imports rdf:resource="http://elite.polito.it/ontologies/dogont.owl"/>
+        <description>A comfort ontology that describes the parameters of comfort for a user in a room</description>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#description -->
+
+    <owl:AnnotationProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#description"/>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#value -->
+
+    <owl:AnnotationProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#value"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gateau/ontologies/2016/3/untitled-ontology-17#description -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/gateau/ontologies/2016/3/untitled-ontology-17#description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#actuator_has_impact_on_comfort -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#actuator_has_impact_on_comfort">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Actuator"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#Comfort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#comfort_concerns_entity -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#comfort_concerns_entity">
+        <owl:inverseOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#entity_feels_comfort"/>
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Comfort"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#comfort_has_level_of_satisfaction -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#comfort_has_level_of_satisfaction">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Comfort"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#SatisfactionLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#comfort_has_quality -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#comfort_has_quality">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Comfort"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#PhysicalQuality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#context_is_composed_of_situation -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#context_is_composed_of_situation">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Context"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#Situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#device_has_function -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#device_has_function">
+        <owl:equivalentProperty rdf:resource="http://elite.polito.it/ontologies/dogont.owl#hasFunctionality"/>
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Device"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#device_has_measure_range -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#device_has_measure_range">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Device"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#MeasureRange"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#entity_feels_comfort -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#entity_feels_comfort">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Entity"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#Comfort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#entity_has_context -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#entity_has_context">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Entity"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#Context"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#environment_has_context -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#environment_has_context">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Environment"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#Context"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#function_has_opposite_function -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#function_has_opposite_function">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Function"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#measure_range_has_unit -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#measure_range_has_unit">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#MeasureRange"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#quality_influences_comfort -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#quality_influences_comfort">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#PhysicalQuality"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#Comfort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#request_has_function -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#request_has_function">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Request"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#rfa_has_device -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#rfa_has_device">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#RequestForAction"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#rfc_concerns_room -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#rfc_concerns_room">
+        <owl:inverseOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#room_has_rfc"/>
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#RequestForChange"/>
+        <rdfs:range rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#rfc_has_comfort -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#rfc_has_comfort">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#RequestForChange"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#Comfort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#rfc_has_solution -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#rfc_has_solution">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#RequestForChange"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#RequestForAction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#room_has_rfc -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#room_has_rfc">
+        <rdfs:domain rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Room"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#RequestForChange"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#sensor_has_current_value -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#sensor_has_current_value">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/muo/muo#QualityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#sensor_has_quality_value -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#sensor_has_quality_value">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Sensor"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/muo/muo#QualityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#sensor_measures_physical_quality -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#sensor_measures_physical_quality">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Sensor"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#PhysicalQuality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#situation_concerns_entity -->
+
+    <owl:ObjectProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#situation_concerns_entity">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Situation"/>
+        <rdfs:range rdf:resource="http://bnjgat.fr/onto/goliath.owl#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#hasFunctionality -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#hasFunctionality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#device_has_current_statevalue -->
+
+    <owl:DatatypeProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#device_has_current_statevalue">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#function_has_command -->
+
+    <owl:DatatypeProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#function_has_command">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Function"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#function_has_effect_status -->
+
+    <owl:DatatypeProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#function_has_effect_status"/>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#function_has_keyword -->
+
+    <owl:DatatypeProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#function_has_keyword">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Function"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#function_has_value -->
+
+    <owl:DatatypeProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#function_has_value">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Function"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#measure_range_has_max_value -->
+
+    <owl:DatatypeProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#measure_range_has_max_value">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#MeasureRange"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#measure_range_has_min_value -->
+
+    <owl:DatatypeProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#measure_range_has_min_value">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#MeasureRange"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#request_has_status -->
+
+    <owl:DatatypeProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#request_has_status">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Request"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#request_has_uuid -->
+
+    <owl:DatatypeProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#request_has_uuid">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Request"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#request_has_value -->
+
+    <owl:DatatypeProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#request_has_value">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Request"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#unit_has_label -->
+
+    <owl:DatatypeProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#unit_has_label">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Unit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#version_has_number -->
+
+    <owl:DatatypeProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#version_has_number">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Version"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#version_has_release_number -->
+
+    <owl:DatatypeProperty rdf:about="http://bnjgat.fr/onto/goliath.owl#version_has_release_number">
+        <rdfs:domain rdf:resource="http://bnjgat.fr/onto/goliath.owl#Version"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/muo#qualityLiteralValue -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/muo/muo#qualityLiteralValue">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/muo/muo#QualityValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#ActivitySituation -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#ActivitySituation">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Actuator -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Actuator">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#AirQuality -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#AirQuality">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#PhysicalQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#AirQualityComfort -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#AirQualityComfort">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Comfort"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#AirflowSensor -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#AirflowSensor">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#AuditiveComfort -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#AuditiveComfort">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Comfort"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#AuditiveQuality -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#AuditiveQuality">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#PhysicalQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#C2H5OHSensor -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#C2H5OHSensor">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#GasSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#CO2Sensor -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#CO2Sensor">
+        <owl:equivalentClass rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Co2Sensor"/>
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#GasSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#COSensor -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#COSensor">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#GasSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#ChromaSensor -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#ChromaSensor">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#LuminanceSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Close -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Close">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Set"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Comfort -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Comfort"/>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Context -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Context"/>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Darker -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Darker">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Decrease"/>
+        <owl:disjointWith rdf:resource="http://bnjgat.fr/onto/goliath.owl#Less"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Decrease -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Decrease">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Device -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Device">
+        <owl:equivalentClass rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Controllable"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Down -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Down">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Set"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Entity -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Entity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#entity_feels_comfort"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://bnjgat.fr/onto/goliath.owl#AirQualityComfort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#entity_feels_comfort"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://bnjgat.fr/onto/goliath.owl#AuditiveComfort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#entity_feels_comfort"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://bnjgat.fr/onto/goliath.owl#HumidityComfort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#entity_feels_comfort"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://bnjgat.fr/onto/goliath.owl#LuminosityComfort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#entity_feels_comfort"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://bnjgat.fr/onto/goliath.owl#ThermalComfort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#entity_feels_comfort"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://bnjgat.fr/onto/goliath.owl#VentilationComfort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Environment -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Environment">
+        <owl:equivalentClass rdf:resource="http://elite.polito.it/ontologies/dogont.owl#BuildingEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#EnvironmentalSituation -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#EnvironmentalSituation">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#ExternalSituation -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#ExternalSituation">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#EnvironmentalSituation"/>
+        <owl:disjointWith rdf:resource="http://bnjgat.fr/onto/goliath.owl#InternalSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Function -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Function">
+        <owl:equivalentClass rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Functionality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#function_has_opposite_function"/>
+                <owl:allValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#GasSensor -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#GasSensor">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#GetStatus -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#GetStatus">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#HVAC -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#HVAC">
+        <owl:equivalentClass rdf:resource="http://elite.polito.it/ontologies/dogont.owl#HVACSystem"/>
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Actuator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#GetStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Start"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Stop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#HumidityComfort -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#HumidityComfort">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Comfort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#quality_influences_comfort"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#ThermalComfort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#HumidityQuality -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#HumidityQuality">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#PhysicalQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#HumiditySensor -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#HumiditySensor">
+        <owl:equivalentClass rdf:resource="http://elite.polito.it/ontologies/dogont.owl#HumiditySensor"/>
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Increase -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Increase">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#InternalSituation -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#InternalSituation">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#EnvironmentalSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Less -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Less">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Decrease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Lighter -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Lighter">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Increase"/>
+        <owl:disjointWith rdf:resource="http://bnjgat.fr/onto/goliath.owl#More"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#LocationSituation -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#LocationSituation">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#LuminanceSensor -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#LuminanceSensor">
+        <owl:equivalentClass rdf:resource="http://elite.polito.it/ontologies/dogont.owl#LightSensor"/>
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#LuminosityComfort -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#LuminosityComfort">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Comfort"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#LuminosityQuality -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#LuminosityQuality">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#PhysicalQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#MeasureRange -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#MeasureRange">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#measure_range_has_unit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://bnjgat.fr/onto/goliath.owl#Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#measure_range_has_max_value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#measure_range_has_min_value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#More -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#More">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Increase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#NH4Sensor -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#NH4Sensor">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#GasSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#NO2Sensor -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#NO2Sensor">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#GasSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#NOSensor -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#NOSensor">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#GasSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#NextDoorSituation -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#NextDoorSituation">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#ExternalSituation"/>
+        <owl:disjointWith rdf:resource="http://bnjgat.fr/onto/goliath.owl#OutsideSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Off -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Off">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Set"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#On -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#On">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Set"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Open -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Open">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Set"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#OutsideSituation -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#OutsideSituation">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#ExternalSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#PMSensor -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#PMSensor">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#GasSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#PhysicalQuality -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#PhysicalQuality">
+        <owl:equivalentClass rdf:resource="http://purl.oclc.org/NET/muo/muo#PhysicalQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Request -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Request">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#request_has_function"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://bnjgat.fr/onto/goliath.owl#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#RequestForAction -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#RequestForAction">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Request"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#rfa_has_device"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://bnjgat.fr/onto/goliath.owl#Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://bnjgat.fr/onto/goliath.owl#RequestForChange"/>
+        <description xml:lang="en">From agents to devices to execute a command</description>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#RequestForChange -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#RequestForChange">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Request"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#rfc_has_comfort"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://bnjgat.fr/onto/goliath.owl#Comfort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <description xml:lang="en">From device to agents to ask for a change on a comfort element</description>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#SO2Sensor -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#SO2Sensor">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#GasSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#SatisfactionLevel -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#SatisfactionLevel"/>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Sensor -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Sensor">
+        <owl:equivalentClass rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Set -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Set">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Situation -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Situation"/>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#SoundLevelSensor -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#SoundLevelSensor">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Start -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Start">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Stop -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Stop">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#ThermalComfort -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#ThermalComfort">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Comfort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#quality_influences_comfort"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#HumidityComfort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#ThermalQuality -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#ThermalQuality">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#PhysicalQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Thermometer -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Thermometer">
+        <owl:equivalentClass rdf:resource="http://elite.polito.it/ontologies/dogont.owl#TemperatureSensor"/>
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#TimeSituation -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#TimeSituation">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Unit -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Unit">
+        <owl:equivalentClass rdf:resource="http://purl.oclc.org/NET/muo/muo#UnitOfMeasurement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#unit_has_label"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Up -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Up">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Set"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#VentilationComfort -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#VentilationComfort">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Comfort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#quality_influences_comfort"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#AirQualityComfort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#quality_influences_comfort"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#HumidityComfort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#quality_influences_comfort"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#ThermalComfort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#VentilationQuality -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#VentilationQuality">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#PhysicalQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#Version -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#Version">
+        <description xml:lang="poznan 06-05-2016 10:15">Created </description>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#airconditionning -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#airconditionning">
+        <owl:equivalentClass rdf:resource="http://elite.polito.it/ontologies/dogont.owl#AirConditioningSystem"/>
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#HVAC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#audio_actuator -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#audio_actuator">
+        <owl:equivalentClass rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Entertainment"/>
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Actuator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#GetStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Less"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#More"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Start"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Stop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#ceilling_lamp -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#ceilling_lamp">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#lamp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#desk_lamp -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#desk_lamp">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#lamp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#door -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#door">
+        <owl:equivalentClass rdf:resource="http://elite.polito.it/ontologies/dogont.owl#DoorActuator"/>
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Actuator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Close"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#GetStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Open"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#fan -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#fan">
+        <owl:equivalentClass rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Fan"/>
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#HVAC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#floor_lamp -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#floor_lamp">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#lamp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#heater -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#heater">
+        <owl:equivalentClass rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Heater"/>
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Actuator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#GetStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Less"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#More"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Set"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Start"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Stop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#humidifier -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#humidifier">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Actuator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#GetStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Less"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#More"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Set"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Start"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Stop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#lamp -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#lamp">
+        <owl:equivalentClass rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Lamp"/>
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Actuator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Decrease"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#GetStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Increase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Off"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#On"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#mechanical_ventilation -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#mechanical_ventilation">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#HVAC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#music_player -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#music_player">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#audio_actuator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#noise_generator -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#noise_generator">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#audio_actuator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#null -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#null">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#shutter -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#shutter">
+        <owl:equivalentClass rdf:resource="http://elite.polito.it/ontologies/dogont.owl#ShutterActuator"/>
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Actuator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Close"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Decrease"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Down"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#GetStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Increase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Open"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Up"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#wall_lamp -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#wall_lamp">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#lamp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#window -->
+
+    <owl:Class rdf:about="http://bnjgat.fr/onto/goliath.owl#window">
+        <owl:equivalentClass rdf:resource="http://elite.polito.it/ontologies/dogont.owl#WindowActuator"/>
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Actuator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Close"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#GetStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Less"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#More"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#device_has_function"/>
+                <owl:someValuesFrom rdf:resource="http://bnjgat.fr/onto/goliath.owl#Open"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#AirConditioningSystem -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#AirConditioningSystem"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#BuildingEnvironment -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#BuildingEnvironment"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Co2Sensor -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Co2Sensor"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Controllable -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Controllable"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#DoorActuator -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#DoorActuator"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Entertainment -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Entertainment"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Fan -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Fan"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Functionality -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Functionality"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#HVACSystem -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#HVACSystem"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Heater -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Heater"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#HumiditySensor -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#HumiditySensor"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Lamp -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Lamp"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#LightSensor -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#LightSensor"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#ShutterActuator -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#ShutterActuator"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#TemperatureSensor -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#TemperatureSensor"/>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#WindowActuator -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#WindowActuator"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/muo#PhysicalQuality -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/muo/muo#PhysicalQuality"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/muo#UnitOfMeasurement -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/muo/muo#UnitOfMeasurement"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Sensor -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Sensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bnjgat.fr/onto/goliath.owl#sensor_has_current_value"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.oclc.org/NET/muo/muo#QualityValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf rdf:resource="http://bnjgat.fr/onto/goliath.owl#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#celcius_degree -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#celcius_degree">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Unit"/>
+        <unit_has_label>C</unit_has_label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">°C</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#close -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#close">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Close"/>
+        <function_has_opposite_function rdf:resource="http://bnjgat.fr/onto/goliath.owl#open"/>
+        <function_has_effect_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">close</function_has_effect_status>
+        <function_has_keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">close</function_has_keyword>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#cubic_meter -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#cubic_meter">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Unit"/>
+        <unit_has_label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">m3</unit_has_label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">m3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#cubic_meter_per_hour -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#cubic_meter_per_hour">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Unit"/>
+        <unit_has_label>m3/h</unit_has_label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">m3/h</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#decibel -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#decibel">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Unit"/>
+        <unit_has_label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">dB</unit_has_label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">dB</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#decrease -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#decrease">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Decrease"/>
+        <function_has_opposite_function rdf:resource="http://bnjgat.fr/onto/goliath.owl#increase"/>
+        <function_has_effect_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">close</function_has_effect_status>
+        <function_has_effect_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">down</function_has_effect_status>
+        <function_has_effect_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">off</function_has_effect_status>
+        <function_has_effect_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stop</function_has_effect_status>
+        <function_has_keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decrease</function_has_keyword>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#down -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#down">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Down"/>
+        <function_has_opposite_function rdf:resource="http://bnjgat.fr/onto/goliath.owl#up"/>
+        <function_has_effect_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">down</function_has_effect_status>
+        <function_has_keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">down</function_has_keyword>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#fahrenheit_degree -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#fahrenheit_degree">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Unit"/>
+        <unit_has_label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">F</unit_has_label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">°F</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#getStatus -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#getStatus">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#GetStatus"/>
+        <function_has_keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">get</function_has_keyword>
+        <function_has_keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status</function_has_keyword>
+        <function_has_keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">update</function_has_keyword>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#gram_per_cubic_meter -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#gram_per_cubic_meter">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Unit"/>
+        <unit_has_label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">g/m3</unit_has_label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">g/m3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#gram_per_hour -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#gram_per_hour">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Unit"/>
+        <unit_has_label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">g/h</unit_has_label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">g/h</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#high_level_of_satisfaction -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#high_level_of_satisfaction">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#SatisfactionLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#increase -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#increase">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Increase"/>
+        <function_has_opposite_function rdf:resource="http://bnjgat.fr/onto/goliath.owl#decrease"/>
+        <function_has_effect_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">on</function_has_effect_status>
+        <function_has_effect_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">open</function_has_effect_status>
+        <function_has_effect_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">start</function_has_effect_status>
+        <function_has_effect_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">up</function_has_effect_status>
+        <function_has_keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increase</function_has_keyword>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#low_level_of_satisfaction -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#low_level_of_satisfaction">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#SatisfactionLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#lux -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#lux">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Unit"/>
+        <unit_has_label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">lx</unit_has_label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">lx</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#meter -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#meter">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Unit"/>
+        <unit_has_label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">m</unit_has_label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">m</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#normal_level_of_satisfaction -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#normal_level_of_satisfaction">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#SatisfactionLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#off -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#off">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Off"/>
+        <function_has_opposite_function rdf:resource="http://bnjgat.fr/onto/goliath.owl#on"/>
+        <function_has_effect_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">off</function_has_effect_status>
+        <function_has_keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">off</function_has_keyword>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#on -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#on">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#On"/>
+        <function_has_opposite_function rdf:resource="http://bnjgat.fr/onto/goliath.owl#off"/>
+        <function_has_effect_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">on</function_has_effect_status>
+        <function_has_keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">on</function_has_keyword>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#open -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#open">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Open"/>
+        <function_has_opposite_function rdf:resource="http://bnjgat.fr/onto/goliath.owl#close"/>
+        <function_has_effect_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">open</function_has_effect_status>
+        <function_has_keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">open</function_has_keyword>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#partspermillion -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#partspermillion">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Unit"/>
+        <unit_has_label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">ppm</unit_has_label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">ppm</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#percent -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#percent">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Unit"/>
+        <unit_has_label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">%</unit_has_label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">%</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#set -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#set">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Set"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#square_meter -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#square_meter">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Unit"/>
+        <unit_has_label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">m2</unit_has_label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">m2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#start -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#start">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Start"/>
+        <function_has_opposite_function rdf:resource="http://bnjgat.fr/onto/goliath.owl#stop"/>
+        <function_has_effect_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">start</function_has_effect_status>
+        <function_has_keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">start</function_has_keyword>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#stop -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#stop">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Stop"/>
+        <function_has_opposite_function rdf:resource="http://bnjgat.fr/onto/goliath.owl#start"/>
+        <function_has_effect_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stop</function_has_effect_status>
+        <function_has_keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stop</function_has_keyword>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#unnamed -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#unnamed">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Unit"/>
+        <unit_has_label></unit_has_label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#up -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#up">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Up"/>
+        <function_has_opposite_function rdf:resource="http://bnjgat.fr/onto/goliath.owl#down"/>
+        <function_has_effect_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">up</function_has_effect_status>
+        <function_has_keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">up</function_has_keyword>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnjgat.fr/onto/goliath.owl#version -->
+
+    <owl:NamedIndividual rdf:about="http://bnjgat.fr/onto/goliath.owl#version">
+        <rdf:type rdf:resource="http://bnjgat.fr/onto/goliath.owl#Version"/>
+        <version_has_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</version_has_number>
+        <version_has_release_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</version_has_release_number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#ActivitySituation"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#EnvironmentalSituation"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#LocationSituation"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#TimeSituation"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Actuator"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Sensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#null"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#AirQuality"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#AuditiveQuality"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#HumidityQuality"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#LuminosityQuality"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#ThermalQuality"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#VentilationQuality"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#AirQualityComfort"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#AuditiveComfort"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#HumidityComfort"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#LuminosityComfort"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#ThermalComfort"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#VentilationComfort"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#AirflowSensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#C2H5OHSensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#CO2Sensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#COSensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#ChromaSensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#HumiditySensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#LuminanceSensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#NH4Sensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#NO2Sensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#NOSensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#PMSensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#SO2Sensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#SoundLevelSensor"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#AirflowSensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#C2H5OHSensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#CO2Sensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#COSensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#ChromaSensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#HumiditySensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#LuminanceSensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#NH4Sensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#NO2Sensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#NOSensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#PMSensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#SO2Sensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#SoundLevelSensor"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Thermometer"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Close"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Down"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Off"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#On"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Open"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Up"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Comfort"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Device"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Function"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#MeasureRange"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Request"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Unit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Decrease"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#GetStatus"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Increase"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Set"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Start"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#Stop"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#HVAC"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#audio_actuator"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#door"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#heater"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#humidifier"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#lamp"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#shutter"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#window"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#airconditionning"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#fan"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#mechanical_ventilation"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#ceilling_lamp"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#desk_lamp"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#floor_lamp"/>
+            <rdf:Description rdf:about="http://bnjgat.fr/onto/goliath.owl#wall_lamp"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
